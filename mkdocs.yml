@@ -1,0 +1,161 @@
+site_name: BrainSAIT Master Documentation System
+site_description: Comprehensive documentation for BrainSAIT LINC Agent Ecosystem - Healthcare AI Platform
+site_author: BrainSAIT Healthcare Technology
+site_url: https://fadil369.github.io/brainsait-linc-docs/
+
+# Repository
+repo_name: Fadil369/brainsait-linc-docs
+repo_url: https://github.com/Fadil369/brainsait-linc-docs
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2025 BrainSAIT Healthcare Technology
+
+# Theme Configuration
+theme:
+  name: material
+  language: en
+  
+  # BrainSAIT Branding Colors
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo        # BrainSAIT primary color
+      accent: teal          # BrainSAIT accent color
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  # Icons and Logo
+  icon:
+    logo: material/brain
+    repo: fontawesome/brands/github
+  
+  # Features
+  features:
+    - navigation.instant      # Instant loading
+    - navigation.tracking     # Anchor tracking
+    - navigation.tabs         # Navigation tabs
+    - navigation.tabs.sticky  # Sticky navigation tabs
+    - navigation.sections     # Navigation sections
+    - navigation.expand       # Expand navigation by default
+    - navigation.indexes      # Section index pages
+    - navigation.top          # Back to top button
+    - search.suggest          # Search suggestions
+    - search.highlight        # Search highlighting
+    - search.share            # Search sharing
+    - header.autohide         # Auto-hide header
+    - content.code.copy       # Copy code button
+    - content.code.annotate   # Code annotations
+    - content.tabs.link       # Linked content tabs
+    - toc.follow              # TOC follows scroll
+    - toc.integrate           # Integrate TOC in navigation
+
+# Plugins
+plugins:
+  - search:
+      lang: 
+        - en
+        - ar
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - tags
+
+# Extensions
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Extra Configuration
+extra:
+  # Social Links
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Fadil369/brainsait-linc-docs
+      name: BrainSAIT on GitHub
+    - icon: fontawesome/solid/globe
+      link: https://brainsait.com
+      name: BrainSAIT Website
+  
+  # Analytics (optional - add when ready)
+  # analytics:
+  #   provider: google
+  #   property: G-XXXXXXXXXX
+  
+  # Versioning (future use)
+  version:
+    provider: mike
+  
+  # Language selector (for future bilingual support)
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: العربية
+      link: /ar/
+      lang: ar
+
+# Navigation Structure
+nav:
+  - Home: index.md
+  - Volume 1 - Healthcare:
+    - healthcare/index.md
+  - Volume 2 - Business:
+    - business/index.md
+  - Volume 3 - Tech & Development:
+    - tech/index.md
+  - Volume 4 - Personal Development:
+    - personal/index.md
+  - Branding Guidelines:
+    - brand/index.md
+
+# Extra CSS (optional - for custom styling)
+extra_css:
+  - stylesheets/extra.css
+
+# Extra JavaScript (optional - for custom functionality)
+extra_javascript:
+  - javascripts/extra.js

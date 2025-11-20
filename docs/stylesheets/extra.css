@@ -1,0 +1,62 @@
+/* BrainSAIT Custom Styles */
+
+/* Custom color adjustments */
+:root {
+  --brainsait-primary: #3F51B5;
+  --brainsait-accent: #009688;
+  --brainsait-dark: #303F9F;
+}
+
+/* Custom styling for callouts */
+.md-typeset .admonition.brainsait {
+  border-left-color: var(--brainsait-primary);
+}
+
+/* Enhanced code blocks */
+.md-typeset pre > code {
+  border-radius: 4px;
+}
+
+/* Custom grid for cards */
+.grid.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.grid.cards > * {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grid.cards > *:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* RTL support for Arabic content */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Custom table styling */
+.md-typeset table:not([class]) {
+  font-size: 0.9em;
+  border-collapse: collapse;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--brainsait-primary);
+  color: white;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .grid.cards {
+    grid-template-columns: 1fr;
+  }
+}
